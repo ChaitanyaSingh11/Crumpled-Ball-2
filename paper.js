@@ -6,8 +6,9 @@ class Paper {
             frictionAir: 0.02,
             density: 0.1
         }
-        this.body = Bodies.circle(x, y, 35, options);
-        this.image = loadImage("assets/paper.png")
+        this.r = 50;
+        this.body = Bodies.circle(x, y,  this.r-10 , options);
+        this.image = loadImage("assets/paper.png");
         World.add(world, this.body);
     }
     display() {
@@ -20,7 +21,7 @@ class Paper {
         rotate(angle);
         fill(255, 0, 133);
         noStroke();
-        image(this.image, 0, 0, 95, 95);
+        image(this.image, 0, 0, this.r * 2, this.r * 2);
         pop();
     }
 }

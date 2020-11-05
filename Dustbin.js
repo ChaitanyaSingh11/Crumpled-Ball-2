@@ -13,8 +13,8 @@ class dustbin {
     display() {
         push();
         imageMode(CENTER);
-        image(this.image1,750, 495);
-        image(this.image2,900, 495);
+        image(this.image2,900, 470,225,225);
+        image(this.image1,755, 470,225,225);
         rectMode(CENTER);
         noStroke()
         fill(0,0);
